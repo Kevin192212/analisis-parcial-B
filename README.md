@@ -59,11 +59,23 @@ Isaac, convencido de que tiene un talento especial para los números, asegura qu
 
 [![Click here!!](https://cf.quizizz.com/img/wayground/brand/plans/logo-basic.png)](https://wayground.com/join?gc=846438)
 
-Punto 1
+### Solucion y correcion
 
-log base 2 n<n<nlog base 2 n<raiz n log base 2 n<n^/log base 2 n<n^0.99<=n^3/2<=n^2<3^n<2^n/2 \* n
+### Punto 1
 
-Punto 2
+log2(n) < raiz(n)*log2(n) < n^0.99 < n < n*log2(n) < n^(3/2) < n^2/log2(n) < n^2 < 2^(n/2)\*n < 3^n
+
+### Punto 2
+
+- Asociación:
+
+  T1(n) = 5n^2 + 10n → Algoritmo cuadrático: Selection / Insertion sort.
+
+  T2(n) = 6n\*log2(n) + 300 → Algoritmo O(n log n): Mergesort / Heapsort.
+
+  T3(n) = 0.01n^3 → Algoritmo cúbico: Multiplicación de matrices cúbica.
+
+  T4(n) = 1.5^n → Algoritmo exponencial: Backtracking con poda leve.
 
 - Comparando T1(n) con T2(n) encuentro que:
   5n^2 + 10n < 6n\log2(n) + 300
@@ -76,3 +88,36 @@ Punto 2
 - Comparando T1(n) con T4(n) encuentro que:
   5n^2 + 10n<1.5^n
   A partir de n>=19 lo que indica que a partir de esa entrada ese algoritmo es mas rapido
+
+### Punto 3
+
+- Analisis
+  Isaac afirma que puede decir cuántos números primos hay en cualquier rango [a, b] que le propongan.
+  Sus amigos le entregan N pares de números (a, b), y él debe responder cuántos primos existen en cada uno de esos intervalos.
+
+- Entrada
+
+  - Un número entero N → la cantidad de pares de intervalos que entregan los amigos.
+  - Luego, N líneas con dos números enteros a y b, que representan los límites del intervalo [a, b].
+
+- Salida
+
+  - Por cada par (a, b), se debe imprimir un número entero que indique cuántos números primos hay en ese rango (incluyendo los límites).
+
+- Logica
+
+  1. Leer el valor de N.
+
+  2. Para cada intervalo (a, b):
+
+  - Inicializar un contador de primos en cero.
+
+  - Recorrer todos los números desde a hasta b.
+
+  - Verificar si cada número es primo.
+
+  - Si lo es, aumentar el contador.
+
+  - Imprimir el resultado.
+
+  3.La verificación de si un número es primo se hace probando divisores desde 2 hasta la raíz cuadrada del número.
